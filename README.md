@@ -12,7 +12,7 @@ This project provides a FastAPI-based API to upload a weight file and an archite
 
 ## Requirements
 
-- Python 3.8+
+- Python 3.10
 - FastAPI
 - Uvicorn
 - Other dependencies as required by your `inference.py`.
@@ -25,7 +25,7 @@ This project provides a FastAPI-based API to upload a weight file and an archite
    cd API
    ```
 
-2. Set up a virtual environment and activate it:
+2. Set up a virtual environment and activate it (or use miniconda):
    ```bash
    python3 -m venv venv
    source venv/bin/activate  # On Windows: venv\\Scripts\\activate

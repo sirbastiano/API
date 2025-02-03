@@ -42,7 +42,7 @@ This project provides a FastAPI-based API to upload a weight file and an archite
 
 1. Start the FastAPI server:
    ```bash
-   uvicorn app:app --reload
+   uvicorn api:app --reload
    ```
    The API will be available at `http://127.0.0.1:8000`.
 

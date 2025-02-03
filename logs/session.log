@@ -1,0 +1,26 @@
+Script started on Mon Feb  3 14:21:20 2025
+[1m[7m%[27m[1m[0m                                                                                ]7;file://DIVSIRATs-MacBook-Pro.local/Users/paramthind/Desktop/API[0m[27m[24m[J(base) paramthind@DIVSIRATs-MacBook-Pro API % [K[?2004hdeactivate[10Dconda deactivate[16Duvicorn api:app --reload[24Dconda activate          [10D[14Dsource venv_py310/bin/activate[30Dcd Desktop/API                [16D[14Dsource venv_py310/bin/activate[?2004l
+[1m[7m%[27m[1m[0m                                                                                ]7;file://DIVSIRATs-MacBook-Pro.local/Users/paramthind/Desktop/API[0m[27m[24m[J(venv_py310) (base) paramthind@DIVSIRATs-MacBook-Pro API % [K[?2004hsource venv_py310/bin/activate[K[A[50Cdeactivate[K[1B[K[A[69C[10Dconda deactivate[16Duvicorn api:app --reload[K[A[56Cconda deactivate[K[1B[K[A[75C[16Duvicorn api:app --reload[K[A[56Cconda activate[K[1B[K[A[73C[?2004l[1B[1m[7m%[27m[1m[0m                                                                                ]7;file://DIVSIRATs-MacBook-Pro.local/Users/paramthind/Desktop/API[0m[27m[24m[J(base) (venv_py310) paramthind@DIVSIRATs-MacBook-Pro API % [K[?2004hconda activate[14Dsource venv_py310/bin/activate[K[A[50Cdeactivate[K[1B[K[A[69C[10Dconda deactivate[16Duvicorn api:app --reload[K[?2004l
+[32mINFO[0m:     Will watch for changes in these directories: ['/Users/paramthind/Desktop/API']
+[32mINFO[0m:     Uvicorn running on [1mhttp://127.0.0.1:8000[0m (Press CTRL+C to quit)
+[32mINFO[0m:     Started reloader process [[36m[1m2445[0m] using [36m[1mWatchFiles[0m
+[32mINFO[0m:     Started server process [[36m2447[0m]
+[32mINFO[0m:     Waiting for application startup.
+[32mINFO[0m:     Application startup complete.
+[32mINFO[0m:     127.0.0.1:51642 - "[1mPOST /run-inference HTTP/1.1[0m" [33m307 Temporary Redirect[0m
+[32mINFO[0m:     127.0.0.1:51642 - "[1mPOST /run-inference/ HTTP/1.1[0m" [31m422 Unprocessable Entity[0m
+^C[32mINFO[0m:     Shutting down
+[32mINFO[0m:     Waiting for application shutdown.
+[32mINFO[0m:     Application shutdown complete.
+[32mINFO[0m:     Finished server process [[36m2447[0m]
+[32mINFO[0m:     Stopping reloader process [[36m[1m2445[0m]
+[1m[7m%[27m[1m[0m                                                                                ]7;file://DIVSIRATs-MacBook-Pro.local/Users/paramthind/Desktop/API[0m[27m[24m[J(base) (venv_py310) paramthind@DIVSIRATs-MacBook-Pro API % [K[?2004hcconda deactib vate[?2004l
+[1m[7m%[27m[1m[0m                                                                                ]7;file://DIVSIRATs-MacBook-Pro.local/Users/paramthind/Desktop/API[0m[27m[24m[J(venv_py310) paramthind@DIVSIRATs-MacBook-Pro API % [K[?2004hddeactivate[?2004l
+[1m[7m%[27m[1m[0m                                                                                ]7;file://DIVSIRATs-MacBook-Pro.local/Users/paramthind/Desktop/API[0m[27m[24m[J(base) paramthind@DIVSIRATs-MacBook-Pro API % [K[?2004h[7mexit[27m[27me[27mx[27mi[27mt[?2004l
+Saving session...
+...copying shared history...
+...saving history...truncating history files...
+...completed.
+Deleting expired sessions...      48 completed.
+
+Script done on Mon Feb  3 14:22:25 2025

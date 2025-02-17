@@ -12,33 +12,27 @@ os.makedirs(UPLOAD_DIR, exist_ok=True)
 
 @app.post("/run-inference/")
 async def run_inference(
-    weight_file: UploadFile = File(...),
-    architecture_file: UploadFile = File(...),
+    model_file: UploadFile = File(...),
 ):
     """
-    Endpoint to upload weight and architecture files, and run inference.
+    Endpoint to upload a single model file and run inference.
     
     Args:
-        weight_file (UploadFile): Weight file for the model.
-        architecture_file (UploadFile): Architecture file for the model.
+        model_file (UploadFile): Complete model file containing weights and architecture.
     
     Returns:
         JSONResponse: Inference result or error message.
     """
     try:
-        # Save uploaded files
-        weight_path = Path(UPLOAD_DIR) / weight_file.filename
-        architecture_path = Path(UPLOAD_DIR) / architecture_file.filename
+        # Save uploaded file
+        model_path = Path(UPLOAD_DIR) / model_file.filename
         
-        with open(weight_path, "wb") as wf:
-            wf.write(await weight_file.read())
+        with open(model_path, "wb") as mf:
+            mf.write(await model_file.read())
         
-        with open(architecture_path, "wb") as af:
-            af.write(await architecture_file.read())
-
         # Run the inference script
         result = subprocess.run(
-            ["python3", "inference.py", "--weights", str(weight_path), "--architecture", str(architecture_path)],
+            ["python3", "inference.py", "--model", str(model_path)],
             capture_output=True,
             text=True,
         )

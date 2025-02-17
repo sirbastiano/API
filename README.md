@@ -1,13 +1,12 @@
 # FastAPI Inference API
 
-This project provides a FastAPI-based API to upload a weight file and an architecture file, run an inference script (`inference.py`), and return the results.
+This project provides a FastAPI-based API to upload a single model file, run an inference script (`inference.py`), and return the results.
 
 ## Features
 
-- Accepts two file uploads via a `POST` request:
-  - **Weight file** (e.g., `.pth` or similar).
-  - **Architecture file** (e.g., model definition or pkl).
-- Executes the `inference.py` script with the uploaded files.
+- Accepts a single file upload via a `POST` request:
+  - **Model file** (e.g., a complete file containing both weights and architecture).
+- Executes the `inference.py` script with the uploaded file.
 - Returns the inference results or an error message.
 
 ## Requirements
@@ -28,7 +27,7 @@ This project provides a FastAPI-based API to upload a weight file and an archite
 2. Set up a virtual environment and activate it (or use miniconda):
    ```bash
    python3 -m venv venv
-   source venv/bin/activate  # On Windows: venv\\Scripts\\activate
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
    ```
 
 3. Install dependencies:
@@ -42,7 +41,7 @@ This project provides a FastAPI-based API to upload a weight file and an archite
 
 1. Start the FastAPI server:
    ```bash
-   uvicorn app:app --reload
+   uvicorn api:app --reload
    ```
    The API will be available at `http://127.0.0.1:8000`.
 
@@ -50,17 +49,15 @@ This project provides a FastAPI-based API to upload a weight file and an archite
 
 #### `POST /run-inference/`
 
-Uploads two files (weight and architecture) and runs inference.
+Uploads a single model file and runs inference.
 
 - **Request**:
-  - `weight_file`: File to be uploaded (e.g., `.weights` file).
-  - `architecture_file`: File to be uploaded (e.g., model definition file).
+  - `model_file`: File to be uploaded (e.g., a complete model file).
 
   Example `cURL` command (from Client):
   ```bash
   curl -X POST "http://127.0.0.1:8000/run-inference/" \
-       -F "weight_file=@path_to_weight_file" \
-       -F "architecture_file=@path_to_architecture_file"
+       -F "model_file=@path_to_model_file"
   ```
 
 - **Response** (example):
@@ -80,7 +77,7 @@ Uploads two files (weight and architecture) and runs inference.
 
 ## Example `inference.py`
 
-The `inference.py` script should process the weight and architecture files. 
+The `inference.py` script should process the single model file. 
 
 To be **tailored** to a specific edge device.
 
@@ -110,11 +107,3 @@ pip install fastapi uvicorn
 
 - Ensure `inference.py` is in the project directory and executable.
 - The uploaded files will be stored in the `uploaded_files/` directory. Clean this directory periodically if needed.
-"""
-
-# Save the content to a file
-file_path = "/mnt/data/README.md"
-with open(file_path, "w") as file:
-    file.write(readme_content)
-
-file_path
